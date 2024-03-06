@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Farah Khafate",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": 112.2, "left": 194.8, "attrs": {} },
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 163.8, "left": -243.6, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": 67.5,
+      "left": 234.6,
+      "attrs": { "temperature": "51.5" }
+    },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": -44, "left": 299.82, "attrs": {} }
+  ],
+  "connections": [
+    [ "bb1:bp.1", "mega:5V", "red", [ "v75.9", "h-319.9" ] ],
+    [ "bb1:7t.e", "mega:GND.2", "black", [ "v163.2", "h-347.75" ] ],
+    [ "bb1:bp.2", "bb1:4t.e", "red", [ "v0" ] ],
+    [ "pir1:OUT", "mega:24", "gold", [ "v9.6", "h-228.34" ] ],
+    [ "pir1:VCC", "bb1:bp.10", "red", [ "v0" ] ],
+    [ "pir1:GND", "bb1:bn.11", "black", [ "v0" ] ],
+    [ "bb1:5t.d", "mega:3", "green", [ "h-211.2", "v0", "h-63.1" ] ],
+    [ "dht1:VCC", "bb1:4t.c", "", [ "$bb" ] ],
+    [ "dht1:SDA", "bb1:5t.c", "", [ "$bb" ] ],
+    [ "dht1:NC", "bb1:6t.c", "", [ "$bb" ] ],
+    [ "dht1:GND", "bb1:7t.c", "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}
