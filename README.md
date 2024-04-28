@@ -1,5 +1,5 @@
 # About
-The hardware implementation is part of a meeting room booking system where the room availability is detected using Arduino and the system included a React web application and a mobile application using Flutter.
+A hardware that monitors temperature, humidity & motion in a room using Wowki.
 
 # Circuit:
 ![Screen Shot 2024-03-06 at 5 18 21 PM](https://github.com/Farahhkh/Motion-Room-Detector/assets/127206744/91015fda-0a80-4189-97e5-6f3b23408346)
